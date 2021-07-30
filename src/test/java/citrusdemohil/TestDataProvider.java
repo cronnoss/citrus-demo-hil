@@ -8,6 +8,7 @@ import com.consol.citrus.testng.CitrusParameters;
 import org.springframework.http.HttpStatus;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 public class TestDataProvider extends TestNGCitrusTestRunner {
 
@@ -26,7 +27,7 @@ public class TestDataProvider extends TestNGCitrusTestRunner {
         };
     }
 
-    @org.testng.annotations.Test(description = "Get information about user", dataProvider = "dataProvider")
+    @Test(description = "Get information about user", dataProvider = "dataProvider")
     @Parameters({"context"})
     @CitrusTest
     @CitrusParameters({"id", "name", "surname"})
